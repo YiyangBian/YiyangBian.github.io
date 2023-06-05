@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yiyang Bian's Personal Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 导入 Roboto 字体 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* 设置字体为 Roboto */
+        }
+
+        .nav-wrapper {
+            background-color: #3f51b5 !important;
+            /* 修改导航栏颜色 */
+        }
+
+        .brand-logo {
+            color: #fff !important;
+            font-size: 24px;
+        }
+
+        .about-photo {
+            width: 300px;
+            height: auto;
+        }
+
+        .row {
+            margin-top: 20px;
+        }
+
+        .carousel .carousel-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .carousel-fixed-item {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .carousel-prev {
+            left: 0;
+        }
+
+        .carousel-next {
+            right: 0;
+        }
+
+        .carousel-prev i,
+        .carousel-next i {
+            font-size: inherit;
+            margin: 0 10px;
+            /* 调整箭头的内边距 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">Yiyang Bian's Personal Blog</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#links">Links</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="row">
+                <h2>Education</h2>
+                <div class="col s12 m6">
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <img src="CCNU.jpg" alt="University Logo 1">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <span class="card-title">Central China Normal University</span>
+                                <p>Degree: Bachelor of Science</p>
+                                <p>Major: Computer Science</p>
+                                <p>GPA: 3.5</p>
+                                <p>Courses: Course 1, Course 2, Course 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <img src="OIP.jpg" alt="University Logo 2">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <span class="card-title">Case Western Reserve University</span>
+                                <p>Degree: Master of Science</p>
+                                <p>Major: Computer Science</p>
+                                <p>GPA: 3.5</p>
+                                <p>Courses: Course A, Course B, Course C</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

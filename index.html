@@ -4,17 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Yiyang Bian's Personal Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 导入 Roboto 字体 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* 设置字体为 Roboto */
+        }
+
+        .nav-wrapper {
+            background-color: #3f51b5 !important;
+            /* 修改导航栏颜色 */
+        }
+
+        .brand-logo {
+            color: #fff !important;
+            font-size: 24px;
+        }
+
+        .about-photo {
+            width: 300px;
+            height: auto;
+        }
+
+        .row {
+            margin-top: 20px;
+        }
+
+        .carousel .carousel-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .carousel-fixed-item {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .carousel-prev,
+        .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .carousel-prev {
+            left: 0;
+        }
+
+        .carousel-next {
+            right: 0;
+        }
+
+        .carousel-prev i,
+        .carousel-next i {
+            font-size: inherit;
+            margin: 0 10px;
+            /* 调整箭头的内边距 */
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Yiyang Bian's Personal Blog</a>
+                <a href="index.html" class="brand-logo">Yiyang Bian's Personal Blog</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="work.html">Work</a></li>
                     <li><a href="#research">Research</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -22,13 +92,72 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </div>
+    <div class="carousel carousel-slider center" data-indicators="true">
+        <a class="carousel-item" href="#one!"><img src="image.jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="image.jpg"></a>
+        <a class="carousel-item" href="#three!"><img src="image.jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="image.jpg"></a>
+        <div class="carousel-fixed-item center">
+            <a class="carousel-prev waves-effect waves-light"><i class="material-icons">chevron_left</i></a>
+            <a class="carousel-next waves-effect waves-light"><i class="material-icons">chevron_right</i></a>
+        </div>
+    </div>
     <div class="container">
-        <p>Hello, my name is Yiyang Bian. I am a graduate student in Computer Science at Case Western Reserve
-            University, currently studying under Professor Yinghui Wu. My research focus is on graph databases and
-            machine learning models. On this blog, I will share updates about my work and other topics of interest.</p>
+        <div class="row">
+            <div class="col s12 m6">
+                <h2>About Me</h2>
+                <p>Hello, my name is Yiyang Bian. I am a graduate student in Computer Science at Case
+                    Western Reserve
+                    University, currently studying under Professor Yinghui Wu. My research focus is on graph
+                    databases
+                    and machine learning models.</p>
+            </div>
+            <div class="col s12 m6">
+                <img class="about-photo" src="image.jpg" alt="My AI Generated Photo">
+                <div class="col s12 left">
+                    <a href="https://www.linkedin.com/in/yiyangbian/" target="_blank"
+                        class="btn-floating btn-medium waves-effect waves-light linkedin-button"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/YiyangBian" target="_blank"
+                        class="btn-floating btn-medium waves-effect waves-light github-button"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://example.com/resume.pdf" target="_blank"
+                        class="btn-floating btn-medium waves-effect waves-light resume-button"><i
+                            class="material-icons">description</i></a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var options = {
+                fullWidth: true,
+                indicators: true
+            };
+            var instances = M.Carousel.init(elems, options);
+
+            var carouselPrev = document.querySelector('.carousel-prev');
+            var carouselNext = document.querySelector('.carousel-next');
+
+            carouselPrev.addEventListener('click', function () {
+                var carouselInstance = M.Carousel.getInstance(elems[0]);
+                carouselInstance.prev();
+            });
+
+            carouselNext.addEventListener('click', function () {
+                var carouselInstance = M.Carousel.getInstance(elems[0]);
+                carouselInstance.next();
+            });
+            // 自动滑动相册
+            setInterval(function () {
+                var carouselInstance = M.Carousel.getInstance(elems[0]);
+                carouselInstance.next();
+            }, 5000); // 每隔5秒滑动到下一张图片
+        });
+    </script>
 </body>
 
 </html>
