@@ -36,42 +36,21 @@
             margin-top: 20px;
         }
 
-        .carousel .carousel-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
+        .education-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
-        .carousel-fixed-item {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
+        .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 20px;
         }
 
-        .carousel-prev,
-        .carousel-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 3rem;
-            color: white;
-            opacity: 0.8;
-        }
-
-        .carousel-prev {
-            left: 0;
-        }
-
-        .carousel-next {
-            right: 0;
-        }
-
-        .carousel-prev i,
-        .carousel-next i {
-            font-size: inherit;
-            margin: 0 10px;
-            /* 调整箭头的内边距 */
+        .content {
+            flex: 1;
         }
     </style>
 </head>
@@ -95,42 +74,38 @@
     </div>
     <div class="container">
         <div class="section">
+            <h2>Education</h2>
             <div class="row">
-                <h2>Education</h2>
-                <div class="col s12 m6">
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img src="CCNU.jpg" alt="University Logo 1">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <span class="card-title">Central China Normal University</span>
-                                <p>Degree: Bachelor of Science</p>
-                                <p>Major: Computer Science</p>
-                                <p>GPA: 3.5</p>
-                                <p>Courses: Course 1, Course 2, Course 3</p>
-                            </div>
+                <div class="col s12 m12">
+                    <div class="education-item">
+                        <img src="CCNU.jpg" alt="University Logo 1" class="logo">
+                        <div class="content">
+                            <h3>Central China Normal University</h3>
+                            <p>Degree: Bachelor of Science</p>
+                            <p>Major: Computer Science</p>
+                            <p>GPA: 3.5</p>
+                            <p>Courses: Course 1, Course 2, Course 3</p>
                         </div>
                     </div>
                 </div>
-                <div class="col s12 m6">
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img src="OIP.jpg" alt="University Logo 2">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <span class="card-title">Case Western Reserve University</span>
-                                <p>Degree: Master of Science</p>
-                                <p>Major: Computer Science</p>
-                                <p>GPA: 3.5</p>
-                                <p>Courses: Course A, Course B, Course C</p>
-                            </div>
+            </div>
+            dsdsa
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="education-item">
+                        <img src="OIP.jpg" alt="University Logo 2" class="logo">
+                        <div class="content">
+                            <h3>Case Western Reserve University</h3>
+                            <p>Degree: Master of Science</p>
+                            <p>Major: Computer Science</p>
+                            <p>GPA: 3.5</p>
+                            <p>Courses: Course A, Course B, Course C</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
