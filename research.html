@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yiyang Bian's Personal Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- 导入 Roboto 字体 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* 设置字体为 Roboto */
+        }
+
+        nav {
+            background-color: transparent !important;
+        }
+
+        nav .nav-wrapper {
+            background-color: transparent !important;
+        }
+
+        /* 将导航栏选项稍微往中心移动 */
+        nav ul {
+            padding-left: 50px;
+            /* 调整此值以控制移动的距离 */
+        }
+
+        /* 修改导航链接的颜色为灰色 */
+        .nav-wrapper ul li a {
+            color: grey !important;
+        }
+
+        /* 当鼠标悬停在导航链接上时，颜色为深灰色 */
+        .nav-wrapper ul li a:hover {
+            color: darkgrey !important;
+        }
+
+        .nav-wrapper ul li:first-child a {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            /* 例如，使标题小一些 */
+        }
+
+        p {
+            font-size: 1.2rem;
+            /* 例如，使内容大一些 */
+        }
+
+        .brand-logo {
+            color: #fff !important;
+            font-size: 24px;
+        }
+
+        .about-photo {
+            width: 300px;
+            height: auto;
+        }
+
+        .row {
+            margin-top: 20px;
+        }
+
+        .education-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 20px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        /* Adding to your existing styles */
+        .publication-item {
+            list-style-type: square;
+            /* This will add a square block before each item */
+            margin-bottom: 10px;
+        }
+
+        .authors:before {
+            content: "\25A0";
+            /* Unicode for a solid square */
+            display: inline-block;
+            margin-right: 10px;
+            /* Adjusts the spacing between the square and the text */
+        }
+
+        .publication-item p {
+            padding-left: 20px;
+            /* Adds a left padding/indentation to all lines inside publication item */
+        }
+
+        .authors {
+            padding-left: 0;
+            /* Removes the left padding/indentation specifically for the authors line */
+        }
+
+        .bold-text {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <ul id="nav-mobile" class="left">
+                    <li><a href="index.html">Yiyang Bian</a></li>
+                    <!-- <li><a href="education.html">Education</a></li> -->
+                    <!-- <li><a href="work.html">Work</a></li> -->
+                    <li><a href="research.html">Research</a></li>
+                    <li><a
+                            href="https://drive.google.com/file/d/1ozdbav_kaIYrqBRF7Ps7eQlgavGFlmxn/view?usp=share_link">CV</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <section id="research">
+            <h2>Research Interests</h2>
+            <p>My primary fascination revolves around graph-centric and data-driven research, with a particular emphasis
+                on establishing trust in data analysis. I am deeply drawn to the potential of Graph Neural Networks
+                (GNNs) not just for uncovering profound structures and patterns, but also for enhancing the
+                trustworthiness of data interpretations. Having reliable, accessible, and systematically organized data
+                is pivotal, and I envision GNNs as instrumental in achieving this. In my pursuits, I aim to amalgamate
+                the intricacies of data management, mining, and machine learning to develop methods that underscore
+                transparency, fairness, reliability, and robustness in algorithmic evaluations. The ultimate objective
+                is to transcend the convolutions of data narratives, enabling decision-makers to interpret data with
+                heightened accuracy and assurance. By embracing both the art and science of data, I am committed to
+                bridging the chasm between multifaceted data landscapes and human comprehension, fostering an era where
+                trust in data-driven insights becomes second nature.</p>
+
+            <h2>Publications</h2>
+            <ul>
+                <li class="publication-item">
+                    <p class="authors"><strong>Authors:</strong> Mengying Wang(PhD), Sheng Guan(PhD), Hanchao Ma(PhD),
+                        Yiyang Bian(MS), Haolai Che(PhD), Abhishek Daundkar(PhD), Alp Sehirlioglu(Professor), Yinghui
+                        Wu(Professor)</p>
+                    <p><em><strong>Title:</strong> Selecting Top-k Data Science Models by Example Dataset.</em>
+                        <span class="bold-text">CIKM '23
+                    </p>
+                    <p><strong>Link:</strong> <a href="https://dl.acm.org/doi/10.1145/3583780.3615051"
+                            target="_blank">Read the paper</a></p>
+                </li>
+                <li class="publication-item">
+                    <p class="authors"><strong>Authors:</strong> Mengying Wang(PhD), Sheng Guan(PhD), Hanchao Ma(PhD),
+                        Yiyang Bian(MS), Abhishek Daundkar(PhD), Alp Sehirlioglu(Professor), Yinghui
+                        Wu(Professor)</p>
+                    <p><em><strong>Title:</strong> CRUX: Crowdsourced Materials Science Resource and Workflow
+                            Exploration.</em> <span class="bold-text">CIKM '22</p>
+                    <p><strong>Link:</strong> <a href="https://dl.acm.org/doi/10.1145/3511808.3557194"
+                            target="_blank">Read the paper</a></p>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

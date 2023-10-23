@@ -17,9 +17,32 @@
             /* 设置字体为 Roboto */
         }
 
-        .nav-wrapper {
-            background-color: #3f51b5 !important;
-            /* 修改导航栏颜色 */
+        nav {
+            background-color: transparent !important;
+        }
+
+        nav .nav-wrapper {
+            background-color: transparent !important;
+        }
+
+        /* 将导航栏选项稍微往中心移动 */
+        nav ul {
+            padding-left: 50px;
+            /* 调整此值以控制移动的距离 */
+        }
+
+        /* 修改导航链接的颜色为灰色 */
+        .nav-wrapper ul li a {
+            color: grey !important;
+        }
+
+        /* 当鼠标悬停在导航链接上时，颜色为深灰色 */
+        .nav-wrapper ul li a:hover {
+            color: darkgrey !important;
+        }
+
+        .nav-wrapper ul li:first-child a {
+            font-weight: bold;
         }
 
         .brand-logo {
@@ -59,15 +82,14 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo">Yiyang Bian's Personal Blog</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#links">Links</a></li>
+                <ul id="nav-mobile" class="left">
+                    <li><a href="index.html">Yiyang Bian</a></li>
+                    <!-- <li><a href="education.html">Education</a></li> -->
+                    <!-- <li><a href="work.html">Work</a></li> -->
+                    <li><a href="research.html">Research</a></li>
+                    <li><a
+                            href="https://drive.google.com/file/d/1ozdbav_kaIYrqBRF7Ps7eQlgavGFlmxn/view?usp=share_link">CV</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -78,7 +100,7 @@
             <div class="row">
                 <div class="col s12 m12">
                     <div class="education-item">
-                        <img src="CCNU.jpg" alt="University Logo 1" class="logo">
+                        <img src="Images/CCNU.jpg" alt="University Logo 1" class="logo">
                         <div class="content">
                             <h3>Central China Normal University</h3>
                             <p>Degree: Bachelor of Science</p>
@@ -89,11 +111,10 @@
                     </div>
                 </div>
             </div>
-            dsdsa
             <div class="row">
                 <div class="col s12 m12">
                     <div class="education-item">
-                        <img src="OIP.jpg" alt="University Logo 2" class="logo">
+                        <img src="Images/OIP.jpg" alt="University Logo 2" class="logo">
                         <div class="content">
                             <h3>Case Western Reserve University</h3>
                             <p>Degree: Master of Science</p>

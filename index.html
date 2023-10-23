@@ -4,74 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <title>Yiyang Bian's Personal Blog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- 导入 Roboto 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            /* 设置字体为 Roboto */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
-        .nav-wrapper {
-            background-color: #3f51b5 !important;
-            /* 修改导航栏颜色 */
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            /* 例如，使标题小一些 */
+        }
+
+        p {
+            font-size: 1.2rem;
+            /* 例如，使内容大一些 */
+        }
+
+
+        nav {
+            background-color: transparent !important;
+        }
+
+        nav .nav-wrapper {
+            background-color: transparent !important;
+        }
+
+        /* 将导航栏选项稍微往中心移动 */
+        nav ul {
+            padding-left: 50px;
+            /* 调整此值以控制移动的距离 */
+        }
+
+        /* 修改导航链接的颜色为灰色 */
+        .nav-wrapper ul li a {
+            color: grey !important;
+        }
+
+        /* 当鼠标悬停在导航链接上时，颜色为深灰色 */
+        .nav-wrapper ul li a:hover {
+            color: darkgrey !important;
+        }
+
+        .nav-wrapper ul li:first-child a {
+            font-weight: bold;
         }
 
         .brand-logo {
-            color: #fff !important;
+            color: #3f51b5 !important;
             font-size: 24px;
         }
 
         .about-photo {
-            width: 300px;
+            width: 400px;
             height: auto;
+            margin-top: 60px;
         }
+
+        /* CSS */
+        .about-photo-column {
+            margin-right: 10px;
+            left: 20px;
+            /* 根据需要调整以缩小间距 */
+        }
+
+        .about-photo-column a {
+            color: black;
+            /* 设置链接为黑色 */
+        }
+
 
         .row {
             margin-top: 20px;
         }
 
-        .carousel .carousel-item img {
-            width: 100%;
-            height: 380px;
-            object-fit: cover;
+        .contact-info li {
+            margin: 5px 0;
+            list-style-type: none;
+            padding: 0;
         }
 
-        .carousel-fixed-item {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
+        .navbar-fixed {
+            position: relative;
+            /* Change to relative */
         }
 
-        .carousel-prev,
-        .carousel-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 3rem;
-            color: white;
-            opacity: 0.8;
+        .container {
+            margin-top: 50px;
+            /* Add some margin to push content below the navbar */
         }
 
-        .carousel-prev {
-            left: 0;
+        .photo-info {
+            margin-top: 20px;
         }
 
-        .carousel-next {
-            right: 0;
+        .photo-info h4 {
+            font-weight: bold;
         }
 
-        .carousel-prev i,
-        .carousel-next i {
-            font-size: inherit;
-            margin: 0 10px;
-            /* 调整箭头的内边距 */
+        .photo-info p {
+            margin: 5px 0;
+        }
+
+        .photo-info p .material-icons {
+            font-size: 16px;
+            /* 调整大小为16px或根据您的需要 */
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .photo-info a i {
+            margin-right: 10px;
+            /* 你可以根据需要调整这个值 */
+        }
+
+        .photo-info a i.fab.fa-linkedin {
+            color: #0077B5;
+            /* LinkedIn的官方蓝色 */
+        }
+
+
+        .name-bold {
+            font-weight: bold;
+        }
+
+        .a {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .education-list {
+            list-style-type: disc !important;
+            /* 这会显示小原点 */
+            padding-left: 10px !important;
+            /* 这会进行适当的缩进 */
+        }
+
+        .education-list li {
+            margin-bottom: 10px !important;
+            font-size: 1.2rem
+                /* 这为列表项提供了间距 */
         }
     </style>
 </head>
@@ -80,95 +160,68 @@
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="index.html" class="brand-logo">Yiyang Bian's Personal Blog</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="education.html">Education</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#links">Links</a></li>
+                <ul id="nav-mobile" class="left">
+                    <li><a href="index.html">Yiyang Bian</a></li>
+                    <!-- <li><a href="education.html">Education</a></li> -->
+                    <!-- <li><a href="work.html">Work</a></li> -->
+                    <li><a href="research.html">Research</a></li>
+                    <li><a
+                            href="https://drive.google.com/file/d/1ozdbav_kaIYrqBRF7Ps7eQlgavGFlmxn/view?usp=share_link">CV</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="carousel carousel-slider center" data-indicators="true">
-        <a class="carousel-item" href="#one!"><img src="life.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="image.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="image.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="image.jpg"></a>
-        <div class="carousel-fixed-item center">
-            <a class="carousel-prev waves-effect waves-light"><i class="material-icons">chevron_left</i></a>
-            <a class="carousel-next waves-effect waves-light"><i class="material-icons">chevron_right</i></a>
-        </div>
-    </div>
+
     <div class="container">
         <div class="row">
+            <div class="col s12 m4 offset-m1 about-photo-column">
+                <img class="about-photo" src="Images/life.jpg" alt="My AI Generated Photo">
+                <div class="photo-info">
+                    <p class="name-bold">Yiyang Bian</p>
+                    <p>Master's Student at CWRU</p>
+                    <br>
+                    <p>
+                        <i class="material-icons">location_on</i>
+                        Cleveland, Ohio
+                    </p>
+                    <p>
+                        <a href="https://www.linkedin.com/in/yiyangbian/" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/YiyangBian" target="_blank">
+                            <i class="fab fa-github"></i> Github
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://scholar.google.com/citations?user=fUMyoEQAAAAJ&hl=en" target="_blank">
+                            <i class="fas fa-graduation-cap"></i> Google Scholar
+                        </a>
+                    </p>
+                </div>
+            </div>
+
             <div class="col s12 m6">
                 <h2>About Me</h2>
-                <p>Hello, my name is Yiyang Bian. I am a master student in Computer Science at Case Western Reserve
-                    University, where I am pursuing my research under the guidance of Prof.Yinghui Wu. My current
-                    research interests lie in the fields of graph databases and machine learning models.</p>
-            </div>
-            <div class="col s12 m6">
-                <img class="about-photo" src="image.jpg" alt="My AI Generated Photo">
-                <div class="col s12 left">
-                    <a href="https://www.linkedin.com/in/yiyangbian/" target="_blank"
-                        class="btn-floating btn-medium waves-effect waves-light linkedin-button"><i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/YiyangBian" target="_blank"
-                        class="btn-floating btn-medium waves-effect waves-light github-button"><i
-                            class="fab fa-github"></i></a>
-                    <a href="https://drive.google.com/file/d/1ozdbav_kaIYrqBRF7Ps7eQlgavGFlmxn/view?usp=share_link"
-                        target="_blank" class="btn-floating btn-medium waves-effect waves-light resume-button"><i
-                            class="material-icons">description</i></a>
-                </div>
+                <p>Hi, my name is Yiyang Bian(Steven). I am a graduate student in Computer Science at Case Western
+                    Reserve University. I am very fortunate to be working in the Database Lab on data mining, data
+                    management, and graph theory under the guidance of <a href="https://yinghwu.github.io/">Prof.
+                        Yinghui Wu.</a> My
+                    current Research
+                    interest is data management and the combination of data mining and machine learning, etc. The
+                    specific content can be found in my <a href="research.html">my research</a>.</p>
+                <h2>Education</h2>
+                <ul class="education-list">
+                    <li>M.S. in Computer Science, Case Western Reserve University</li>
+                    <li>B.S. in Computer Science, Central China Normal Univeristy</li>
+                </ul>
             </div>
         </div>
-        <div class="section">
-            <h2>My Life</h2>
-            <div class="row">
-                <div class="col s12 m6 l4">
-                    <img src="basketball_1.jpg" alt="Basketball Photo 1" class="responsive-img">
-                </div>
-                <div class="col s12 m6 l4">
-                    <img src="basketball_2.jpg" alt="Basketball Photo 2" class="responsive-img">
-                </div>
-                <!-- Add more photo grid items as needed -->
-            </div>
-        </div>
-
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.carousel');
-            var options = {
-                fullWidth: true,
-                indicators: true
-            };
-            var instances = M.Carousel.init(elems, options);
-
-            var carouselPrev = document.querySelector('.carousel-prev');
-            var carouselNext = document.querySelector('.carousel-next');
-
-            carouselPrev.addEventListener('click', function () {
-                var carouselInstance = M.Carousel.getInstance(elems[0]);
-                carouselInstance.prev();
-            });
-
-            carouselNext.addEventListener('click', function () {
-                var carouselInstance = M.Carousel.getInstance(elems[0]);
-                carouselInstance.next();
-            });
-            // 自动滑动相册
-            setInterval(function () {
-                var carouselInstance = M.Carousel.getInstance(elems[0]);
-                carouselInstance.next();
-            }, 5000); // 每隔5秒滑动到下一张图片
-        });
-    </script>
 </body>
 
 </html>
