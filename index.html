@@ -17,14 +17,11 @@
         h2 {
             font-size: 2rem;
             font-weight: bold;
-            /* 例如，使标题小一些 */
         }
 
         p {
             font-size: 1.2rem;
-            /* 例如，使内容大一些 */
         }
-
 
         nav {
             background-color: transparent !important;
@@ -34,18 +31,14 @@
             background-color: transparent !important;
         }
 
-        /* 将导航栏选项稍微往中心移动 */
         nav ul {
             padding-left: 50px;
-            /* 调整此值以控制移动的距离 */
         }
 
-        /* 修改导航链接的颜色为灰色 */
         .nav-wrapper ul li a {
             color: grey !important;
         }
 
-        /* 当鼠标悬停在导航链接上时，颜色为深灰色 */
         .nav-wrapper ul li a:hover {
             color: darkgrey !important;
         }
@@ -65,18 +58,9 @@
             margin-top: 60px;
         }
 
-        /* CSS */
-        .about-photo-column {
-            margin-right: 10px;
-            left: 20px;
-            /* 根据需要调整以缩小间距 */
-        }
-
         .about-photo-column a {
             color: black;
-            /* 设置链接为黑色 */
         }
-
 
         .row {
             margin-top: 20px;
@@ -90,12 +74,10 @@
 
         .navbar-fixed {
             position: relative;
-            /* Change to relative */
         }
 
         .container {
             margin-top: 50px;
-            /* Add some margin to push content below the navbar */
         }
 
         .photo-info {
@@ -112,21 +94,17 @@
 
         .photo-info p .material-icons {
             font-size: 16px;
-            /* 调整大小为16px或根据您的需要 */
             vertical-align: middle;
             margin-right: 5px;
         }
 
         .photo-info a i {
             margin-right: 10px;
-            /* 你可以根据需要调整这个值 */
         }
 
         .photo-info a i.fab.fa-linkedin {
             color: #0077B5;
-            /* LinkedIn的官方蓝色 */
         }
-
 
         .name-bold {
             font-weight: bold;
@@ -143,15 +121,39 @@
 
         .education-list {
             list-style-type: disc !important;
-            /* 这会显示小原点 */
             padding-left: 10px !important;
-            /* 这会进行适当的缩进 */
         }
 
         .education-list li {
             margin-bottom: 10px !important;
-            font-size: 1.2rem
-                /* 这为列表项提供了间距 */
+            font-size: 1.2rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .about-photo {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .nav-wrapper ul {
+                padding-left: 10px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .education-list li {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -175,7 +177,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col s12 m4 offset-m1 about-photo-column">
+            <div class="col s12 m6">
                 <img class="about-photo" src="Images/life.jpg" alt="My AI Generated Photo">
                 <div class="photo-info">
                     <p class="name-bold">Yiyang Bian</p>
