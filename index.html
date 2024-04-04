@@ -11,16 +11,38 @@
 
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .navbar-fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #ffffff;
+            /* 设置背景颜色，可以根据需要调整 */
+            z-index: 1000;
+            /* 设置一个较高的 z-index 值 */
+        }
+
+        .container {
+            margin-top: 100px;
+            /* 添加间距，可以根据需要调整 */
         }
 
         h2 {
             font-size: 2rem;
             font-weight: bold;
+            color: #3f51b5;
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
         }
 
         nav {
@@ -43,53 +65,23 @@
             color: darkgrey !important;
         }
 
-        .nav-wrapper ul li:first-child a {
-            font-weight: bold;
-        }
-
         .brand-logo {
             color: #3f51b5 !important;
             font-size: 24px;
         }
 
         .about-photo {
-            width: 400px;
+            width: 100%;
             height: auto;
-            margin-top: 60px;
-        }
-
-        .about-photo-column a {
-            color: black;
-        }
-
-        .row {
-            margin-top: 20px;
-        }
-
-        .contact-info li {
-            margin: 5px 0;
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .navbar-fixed {
-            position: relative;
-        }
-
-        .container {
-            margin-top: 50px;
+            margin-top: 30px;
         }
 
         .photo-info {
             margin-top: 20px;
         }
 
-        .photo-info h4 {
-            font-weight: bold;
-        }
-
         .photo-info p {
-            margin: 5px 0;
+            margin: 10px 0;
         }
 
         .photo-info p .material-icons {
@@ -110,8 +102,8 @@
             font-weight: bold;
         }
 
-        .a {
-            color: black;
+        a {
+            color: #3f51b5;
             text-decoration: none;
         }
 
@@ -121,7 +113,7 @@
 
         .education-list {
             list-style-type: disc !important;
-            padding-left: 10px !important;
+            padding-left: 20px !important;
         }
 
         .education-list li {
@@ -129,31 +121,18 @@
             font-size: 1.2rem;
         }
 
-        @media only screen and (max-width: 600px) {
-            .about-photo {
-                width: 100%;
-                margin-top: 20px;
-            }
+        .news-heading {
+            color: #d32f2f;
+            font-style: italic;
+        }
 
-            .container {
-                padding: 20px;
-            }
+        .news-list {
+            list-style-type: disc !important;
+            padding-left: 20px !important;
+        }
 
-            .nav-wrapper ul {
-                padding-left: 10px;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            .education-list li {
-                font-size: 1rem;
-            }
+        .news-list li {
+            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -164,8 +143,6 @@
             <div class="nav-wrapper">
                 <ul id="nav-mobile" class="left">
                     <li><a href="index.html">Yiyang Bian</a></li>
-                    <!-- <li><a href="education.html">Education</a></li> -->
-                    <!-- <li><a href="work.html">Work</a></li> -->
                     <li><a href="research.html">Research</a></li>
                     <li><a
                             href="https://drive.google.com/file/d/1NozZH2d5HcQv3cyWcr3s-cGwMVshe8Gf/view?usp=sharing">CV</a>
@@ -177,11 +154,13 @@
 
     <div class="container">
         <div class="row">
-            <div class="col s12 m6">
+            <div class="col s12 m5">
                 <img class="about-photo" src="Images/life.jpg" alt="My AI Generated Photo">
                 <div class="photo-info">
                     <p class="name-bold">Yiyang Bian</p>
                     <p>Master's Student at CWRU</p>
+                    <p>Database Group</p>
+                    <p>Department of Computer & Data Sciences, Case School of Engineering</p>
                     <br>
                     <p>
                         <i class="material-icons">location_on</i>
@@ -205,19 +184,29 @@
                 </div>
             </div>
 
-            <div class="col s12 m6">
+            <div class="col s12 m7">
                 <h2>About Me</h2>
-                <p>Hi, my name is Yiyang Bian(Steven). I am a graduate student in Computer Science at Case Western
+                <p>Hi, my name is Yiyang Bian (Steven). I am a graduate student in Computer Science at Case Western
                     Reserve University. I am very fortunate to be working in the Database Lab on data mining, data
-                    management, and graph theory under the guidance of <a href="https://yinghwu.github.io/">Prof.
-                        Yinghui Wu.</a> My
-                    current Research
-                    interest is data management and the combination of data mining and machine learning, etc. The
-                    specific content can be found in my <a href="research.html">research</a>.</p>
+                    management, and graph theory under the guidance of <a href="https://yinghwu.github.io/"
+                        target="_blank">Prof.
+                        Yinghui Wu.</a> My current research interest is data management and the combination of data
+                    mining and machine learning, etc. The specific content can be found in my <a
+                        href="research.html">research</a>.</p>
                 <h2>Education</h2>
                 <ul class="education-list">
-                    <li>M.S. in Computer Science, Case Western Reserve University</li>
-                    <li>B.S. in Computer Science, Central China Normal Univeristy</li>
+                    <li>Ph.D in Computer Science, University of California, Riverside (Incoming)</li>
+                    <li>M.S. in Computer Science, Case Western Reserve University (2021.8 - 2023.12)</li>
+                    <li>B.S. in Computer Science, Central China Normal University (2017.9 - 2021.8)</li>
+                </ul>
+                <h2 class="news-heading">News</h2>
+                <ul class="news-list">
+                    <li>[2024.4]: Starting from the Fall of 2024, I will join the University of California, Riverside to
+                        begin my PhD career, and I will join the Spatial Data Laboratory led by <a
+                            href="https://www.cs.ucr.edu/~amr/" target="_blank">Prof. Amr Madgy</a>.</li>
+                    <li>[2024.1]: I successfully completed my Master's <a
+                            href="https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?clear=10&p10_accession_num=case1705079157561202"
+                            target="_blank">thesis</a> defense.</li>
                 </ul>
             </div>
         </div>
