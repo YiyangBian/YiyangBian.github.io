@@ -10,46 +10,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <style>
-        body {
-            font-family: 'Lato', sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* Set body to use Flexbox */
         }
+
+        .header {
+            width: 20%;
+            /* 根据需要调整宽度 */
+            height: 100vh;
+            /* 完整视口高度 */
+            background-color: #f4f4f4;
+            /* 提供背景色以便于观察布局 */
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            /* 垂直居中 */
+            align-items: center;
+            /* 水平居中 */
+            position: relative;
+            /* 为内部可能的绝对定位提供参照 */
+        }
+
 
         .navbar-fixed {
-            position: fixed;
+            position: absolute;
             top: 0;
+            left: 0;
             width: 100%;
+            height: 64px;
             background-color: #ffffff;
-            /* 设置背景颜色，可以根据需要调整 */
             z-index: 1000;
-            /* 设置一个较高的 z-index 值 */
         }
 
-        .container {
-            margin-top: 100px;
-            /* 添加间距，可以根据需要调整 */
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #3f51b5;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        nav {
-            background-color: transparent !important;
-        }
-
-        nav .nav-wrapper {
+        nav,
+        .nav-wrapper {
             background-color: transparent !important;
         }
 
@@ -70,15 +69,37 @@
             font-size: 24px;
         }
 
-        .about-photo {
-            width: 100%;
-            height: auto;
-            margin-top: 30px;
+        .container {
+            flex-grow: 1;
+            /* Takes the remaining space */
+            height: 100vh;
+            /* Full height */
+            overflow: auto;
+            /* In case of overflow */
+        }
+
+        .about-section,
+        .content-section {
+            flex: 1;
+            margin-right: auto;
+            margin-top: 150px;
+            padding-left: 0;
         }
 
         .photo-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* 垂直居中 */
+            align-items: center;
+            /* 水平居中 */
+            width: 100%;
+            /* 占满父容器的宽度 */
+            text-align: center;
+            /* 确保文本也居中，特别是对单行文本 */
             margin-top: 20px;
         }
+
 
         .photo-info p {
             margin: 10px 0;
@@ -111,14 +132,29 @@
             text-decoration: underline;
         }
 
-        .education-list {
+        .education-list,
+        .news-list {
             list-style-type: disc !important;
             padding-left: 20px !important;
         }
 
-        .education-list li {
+        .education-list li,
+        .news-list li {
             margin-bottom: 10px !important;
             font-size: 1.2rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #3f51b5;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
         }
 
         .news-heading {
@@ -126,14 +162,16 @@
             font-style: italic;
         }
 
-        .news-list {
-            list-style-type: disc !important;
-            padding-left: 20px !important;
+        .profile-photo {
+            width: 200px;
+            /* 或者你想要的任何宽度 */
+            height: auto;
+            /* 保持图片的纵横比 */
+            margin-top: 150px;
+            /* 减少顶部外边距 */
         }
+    </style>
 
-        .news-list li {
-            font-size: 1.2rem;
-        }
     </style>
 </head>
 
@@ -152,63 +190,61 @@
         </nav>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m5">
-                <img class="about-photo" src="Images/life.jpg" alt="My AI Generated Photo">
-                <div class="photo-info">
-                    <p class="name-bold">Yiyang Bian</p>
-                    <p>Master's Student at CWRU</p>
-                    <p>Database Group</p>
-                    <p>Department of Computer & Data Sciences, Case School of Engineering</p>
-                    <br>
-                    <p>
-                        <i class="material-icons">location_on</i>
-                        Cleveland, Ohio
-                    </p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/yiyangbian/" target="_blank">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </p>
-                    <p>
-                        <a href="https://github.com/YiyangBian" target="_blank">
-                            <i class="fab fa-github"></i> Github
-                        </a>
-                    </p>
-                    <p>
-                        <a href="https://scholar.google.com/citations?user=fUMyoEQAAAAJ&hl=en" target="_blank">
-                            <i class="fas fa-graduation-cap"></i> Google Scholar
-                        </a>
-                    </p>
-                </div>
-            </div>
+    <div class="header">
+        <img class="profile-photo" src="Images/life.jpg" alt="My AI Generated Photo">
+        <div class="photo-info">
+            <p class="name-bold">Yiyang Bian</p>
+            <p>Master's Student at CWRU</p>
+            <p>Database Group</p>
+            <p>Department of Computer & Data Sciences, Case School of Engineering</p>
+            <br>
+            <p>
+                <i class="material-icons">location_on</i>
+                Cleveland, Ohio
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/yiyangbian/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+            <p>
+                <a href="https://github.com/YiyangBian" target="_blank">
+                    <i class="fab fa-github"></i> Github
+                </a>
+            </p>
+            <p>
+                <a href="https://scholar.google.com/citations?user=fUMyoEQAAAAJ&hl=en" target="_blank">
+                    <i class="fas fa-graduation-cap"></i> Google Scholar
+                </a>
+            </p>
+        </div>
+    </div>
 
-            <div class="col s12 m7">
-                <h2>About Me</h2>
-                <p>Hi, my name is Yiyang Bian (Steven). I am a graduate student in Computer Science at Case Western
-                    Reserve University. I am very fortunate to be working in the Database Lab on data mining, data
-                    management, and graph theory under the guidance of <a href="https://yinghwu.github.io/"
-                        target="_blank">Prof.
-                        Yinghui Wu.</a> My current research interest is data management and the combination of data
-                    mining and machine learning, etc. The specific content can be found in my <a
-                        href="research.html">research</a>.</p>
-                <h2>Education</h2>
-                <ul class="education-list">
-                    <li>Ph.D in Computer Science, University of California, Riverside (Incoming)</li>
-                    <li>M.S. in Computer Science, Case Western Reserve University (2021.8 - 2023.12)</li>
-                    <li>B.S. in Computer Science, Central China Normal University (2017.9 - 2021.8)</li>
-                </ul>
-                <h2 class="news-heading">News</h2>
-                <ul class="news-list">
-                    <li>[2024.4]: Starting from the Fall of 2024, I will join the University of California, Riverside to
-                        begin my PhD career, and I will join the Spatial Data Laboratory led by <a
-                            href="https://www.cs.ucr.edu/~amr/" target="_blank">Prof. Amr Madgy</a>.</li>
-                    <li>[2024.1]: I successfully completed my Master's <a
-                            href="https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?clear=10&p10_accession_num=case1705079157561202"
-                            target="_blank">thesis</a> defense.</li>
-                </ul>
-            </div>
+    <div class="container">
+        <div class="about-section">
+            <h2>About Me</h2>
+            <p>Hi, my name is Yiyang Bian (Steven). I am a graduate student in Computer Science at Case Western
+                Reserve University. I am very fortunate to be working in the Database Lab on data mining, data
+                management, and graph theory under the guidance of <a href="https://yinghwu.github.io/"
+                    target="_blank">Prof.
+                    Yinghui Wu.</a> My current research interest is data management and the combination of data
+                mining and machine learning, etc. The specific content can be found in my <a
+                    href="research.html">research</a>.</p>
+            <h2>Education</h2>
+            <ul class="education-list">
+                <li>Ph.D in Computer Science, University of California, Riverside (Incoming)</li>
+                <li>M.S. in Computer Science, Case Western Reserve University (2021.8 - 2023.12)</li>
+                <li>B.S. in Computer Science, Central China Normal University (2017.9 - 2021.8)</li>
+            </ul>
+            <h2 class="news-heading">News</h2>
+            <ul class="news-list">
+                <li>[2024.4]: Starting from the Fall of 2024, I will join the University of California, Riverside to
+                    begin my PhD career, and I will join the Spatial Data Laboratory led by <a
+                        href="https://www.cs.ucr.edu/~amr/" target="_blank">Prof. Amr Madgy</a>.</li>
+                <li>[2024.1]: I successfully completed my Master's <a
+                        href="https://etd.ohiolink.edu/acprod/odb_etd/etd/r/1501/10?clear=10&p10_accession_num=case1705079157561202"
+                        target="_blank">thesis</a> defense.</li>
+            </ul>
         </div>
     </div>
 
