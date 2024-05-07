@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeRl0BrZdRsmNirYg6s2Uq8OzlCFrYbmA&callback=initMap">
+        </script>
 
     <style>
         body,
@@ -170,6 +173,17 @@
             margin-top: 150px;
             /* 减少顶部外边距 */
         }
+
+        #clustrmaps-widget {
+            width: 100%;
+            /* 控制宽度，根据需要调整 */
+            max-width: 600px;
+            /* 最大宽度，可按需调整 */
+            margin: auto;
+            /* 水平居中 */
+            padding: 20px 0;
+            /* 增加上下内边距 */
+        }
     </style>
 
     </style>
@@ -246,9 +260,18 @@
                         target="_blank">thesis</a> defense.</li>
             </ul>
         </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <footer>
+            <!-- ClustrMaps Widget -->
+            <div id="clustrmaps-widget">
+                <script type='text/javascript' id='clustrmaps'
+                    src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=Zm8AJF9x2FvNaW7NNR7QpbSDNPPV7TyaI2Txo5ZNIvo'></script>
+            </div>
+        </footer>
+
+    </div>
 </body>
+
+
 
 </html>
