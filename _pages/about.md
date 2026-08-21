@@ -11,6 +11,7 @@ profile:
   more_info: >
     <style>
       .post-header { display: none; }
+      .post article h2 { text-transform: capitalize; }
       .profile .more-info { text-align: center; }
       .profile-identity { display: grid; gap: 0.15rem; margin-top: 0.9rem; }
       .profile-identity strong { font-size: 1.1rem; }
@@ -63,7 +64,7 @@ My research sits at the intersection of **geospatial AI, data management, inform
 
 During my master's study at Case Western Reserve University, I was fortunate to work in the database laboratory led by [Prof. Yinghui Wu](https://yinghwu.github.io/).
 
-## Research interests
+## Research Interests
 
 Geospatial AI · Spatial data science · Data management · Query optimization · Information retrieval · Machine learning
 
