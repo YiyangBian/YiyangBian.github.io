@@ -9,17 +9,30 @@ profile:
   image: yiyang-bian.jpg
   image_circular: false
   more_info: >
-    <p>Center for Geospatial Sciences</p>
-    <p>Riverside, California, USA</p>
     <style>
-      .social .contact-icons { font-size: 1.5rem; }
-      .social .contact-icons a { margin: 0 0.35rem; }
-      .social .contact-icons svg { height: 1.5rem; margin-bottom: 0; width: 1.5rem; }
-      .social .contact-icons img { height: 1.5rem; margin-bottom: 0; width: 1.5rem; }
+      .post-header { display: none; }
+      .profile .more-info { text-align: center; }
+      .profile-identity { display: grid; gap: 0.15rem; margin-top: 0.9rem; }
+      .profile-identity strong { font-size: 1.1rem; }
+      .profile-identity span { font-size: 0.82rem; line-height: 1.35; }
+      .profile-location { font-size: 0.78rem; margin: 0.3rem 0 0.7rem; }
+      .profile-social { display: flex; font-size: 1.5rem; gap: 0.8rem; justify-content: center; }
+      .profile-social a { text-decoration: none; }
+      .profile-social i { font-size: 1.5rem; }
     </style>
-
+    <div class="profile-identity">
+      <strong>Yiyang Bian</strong>
+      <span>Ph.D. Student in Computer Science</span>
+      <span>University of California, Riverside</span>
+    </div>
+    <p class="profile-location">Riverside, California</p>
+    <div class="profile-social">
+      <a href="/assets/pdf/Yiyang_Resume.pdf" title="CV" aria-label="CV"><i class="fa-solid fa-file-pdf"></i></a>
+      <a href="https://scholar.google.com/citations?user=xQ1kv14AAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+      <a href="https://www.linkedin.com/in/yiyangbian/" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/YiyangBian" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
 selected_papers: true
-social: true
+social: false
 
 announcements:
   enabled: true
