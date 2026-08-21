@@ -18,7 +18,7 @@ social: true
 announcements:
   enabled: true
   scrollable: true
-  limit: 5
+  limit: 1
 
 latest_posts:
   enabled: false
@@ -33,9 +33,5 @@ During my master's study at Case Western Reserve University, I was fortunate to 
 ## Research interests
 
 Geospatial AI · Spatial data science · Data management · Query optimization · Information retrieval · Machine learning
-
-## Selected work
-
-My recent work includes [MODis](https://arxiv.org/abs/2502.11262), a multi-objective data discovery framework for generating skyline datasets, and [ModsNet](https://www.vldb.org/pvldb/vol17/p4457-wang.pdf), a performance-aware top-k model search system using exemplar datasets.
 
 See the [full publications list](/publications/) or follow my work on [Google Scholar](https://scholar.google.com/citations?user=xQ1kv14AAAAJ&hl=en).
