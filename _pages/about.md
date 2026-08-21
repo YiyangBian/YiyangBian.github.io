@@ -42,6 +42,7 @@ profile:
       <a href="https://scholar.google.com/citations?user=xQ1kv14AAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
       <a href="https://www.linkedin.com/in/yiyangbian/" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://github.com/YiyangBian" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
 selected_papers: true
 social: false
 
