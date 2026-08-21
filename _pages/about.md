@@ -43,6 +43,8 @@ latest_posts:
   enabled: false
 ---
 
+## About Me
+
 I am a Ph.D. student in Computer Science at the [University of California, Riverside](https://www.ucr.edu/), where I work with [Prof. Amr Magdy](https://www.cs.ucr.edu/~amr/) in the [Center for Geospatial Sciences](https://spatial.ucr.edu/).
 
 My research sits at the intersection of **geospatial AI, data management, information retrieval, and machine learning**. I am currently interested in Geo-spatial Retrieval-Augmented Generation (RAG): combining spatial databases, semantic retrieval, and language models so systems can reason about both what a place means and where it is.
