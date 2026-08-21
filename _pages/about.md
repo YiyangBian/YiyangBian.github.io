@@ -19,6 +19,17 @@ profile:
       .profile-social { display: flex; font-size: 1.5rem; gap: 0.8rem; justify-content: center; }
       .profile-social a { text-decoration: none; }
       .profile-social i { font-size: 1.5rem; }
+      @media (min-width: 768px) {
+        .post article { column-gap: 2rem; display: grid; grid-template-columns: minmax(180px, 30%) minmax(0, 1fr); }
+        .post article > .profile { float: none; grid-column: 1; grid-row: 1; margin: 0; width: auto; }
+        .post article > .clearfix { grid-column: 2; grid-row: 1; }
+        .post article > h2,
+        .post article > .news,
+        .post article > .publications { grid-column: 2; }
+      }
+      @media (max-width: 767px) {
+        .post article > .profile { float: none; margin: 0 auto 2rem; max-width: 320px; width: 100%; }
+      }
     </style>
     <div class="profile-identity">
       <strong>Yiyang Bian</strong>
