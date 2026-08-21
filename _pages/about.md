@@ -10,10 +10,6 @@ profile:
   image_circular: false
   more_info: >
     <style>
-      :root {
-        --global-theme-color: #2563eb;
-        --global-hover-color: #1d4ed8;
-      }
       .post-header { display: none; }
       .post article h2 { text-transform: capitalize; }
       .profile .more-info { text-align: center; }
