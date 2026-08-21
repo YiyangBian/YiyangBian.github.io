@@ -5,7 +5,7 @@ permalink: /
 subtitle: Ph.D. Student in Computer Science · University of California, Riverside
 
 profile:
-  align: right
+  align: left
   image: yiyang-bian.jpg
   image_circular: false
   more_info: >
