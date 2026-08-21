@@ -20,7 +20,7 @@ profile:
       .profile-identity { display: grid; gap: 0.15rem; margin-top: 0.9rem; }
       .profile-identity strong { font-size: 1.1rem; }
       .profile-identity span { font-size: 0.82rem; line-height: 1.35; }
-      .profile-social { display: flex; font-size: 1.5rem; gap: 0.8rem; justify-content: center; }
+      .profile-social { display: flex; font-size: 1.5rem; gap: 0.8rem; justify-content: center; margin-top: 0.5rem; }
       .profile-social a { text-decoration: none; }
       .profile-social i { font-size: 1.5rem; }
       @media (min-width: 768px) {
