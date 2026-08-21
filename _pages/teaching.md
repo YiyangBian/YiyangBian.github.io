@@ -44,6 +44,7 @@ nav_order: 6
         decoding="async"
       >
     </a>
+
   </section>
 
   <dialog class="certificate-viewer" data-certificate-viewer aria-labelledby="certificate-viewer-title">
@@ -78,6 +79,7 @@ nav_order: 6
         <span class="sr-only" data-certificate-live aria-live="polite" aria-atomic="true"></span>
       </div>
     </div>
+
   </dialog>
 
   <section class="teaching-section" aria-labelledby="teaching-experience-title">
@@ -136,6 +138,7 @@ nav_order: 6
       Course assignments are listed in the
       <a href="https://registrar.ucr.edu/registering/schedule-of-classes">UCR Schedule of Classes</a>.
     </p>
+
   </section>
 
   <section class="teaching-section" aria-labelledby="teaching-evaluations-title">
@@ -212,6 +215,7 @@ nav_order: 6
         <p class="teaching-metric__responses">73 responses</p>
       </article>
     </div>
+
   </section>
 
   <section class="teaching-section" aria-labelledby="teaching-feedback-title">
@@ -305,6 +309,7 @@ nav_order: 6
       Response counts vary by item. Dimension scores are simple averages of the item-level means shown in the SET dashboard. Comments are lightly
       edited only for spelling and punctuation.
     </p>
+
   </section>
 </div>
 

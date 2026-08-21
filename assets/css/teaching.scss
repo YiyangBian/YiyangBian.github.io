@@ -28,9 +28,7 @@
   overflow: hidden;
   border: 1px solid var(--teaching-border);
   border-radius: var(--teaching-radius);
-  background:
-    radial-gradient(circle at 0 0, var(--teaching-accent-soft), transparent 42%),
-    var(--teaching-surface);
+  background: radial-gradient(circle at 0 0, var(--teaching-accent-soft), transparent 42%), var(--teaching-surface);
   box-shadow: 0 1rem 3rem color-mix(in srgb, var(--global-text-color, #202124) 8%, transparent);
 }
 
@@ -483,9 +481,7 @@
   padding: clamp(1.25rem, 4vw, 2.25rem);
   border: 1px solid var(--teaching-border);
   border-radius: var(--teaching-radius);
-  background:
-    linear-gradient(135deg, var(--teaching-accent-soft), transparent 62%),
-    var(--teaching-surface);
+  background: linear-gradient(135deg, var(--teaching-accent-soft), transparent 62%), var(--teaching-surface);
 }
 
 .teaching-feedback__slides {
@@ -655,7 +651,6 @@
     order: 0;
     width: 100%;
   }
-
 }
 
 @media (max-width: 650px) {
