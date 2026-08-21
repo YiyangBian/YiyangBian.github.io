@@ -11,6 +11,12 @@ profile:
   more_info: >
     <p>Center for Geospatial Sciences</p>
     <p>Riverside, California, USA</p>
+    <style>
+      .social .contact-icons { font-size: 1.5rem; }
+      .social .contact-icons a { margin: 0 0.35rem; }
+      .social .contact-icons svg { height: 1.5rem; margin-bottom: 0; width: 1.5rem; }
+      .social .contact-icons img { height: 1.5rem; margin-bottom: 0; width: 1.5rem; }
+    </style>
 
 selected_papers: true
 social: true
