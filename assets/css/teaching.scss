@@ -20,7 +20,7 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  grid-template-columns: minmax(15rem, 0.8fr) minmax(22rem, 1.25fr);
+  grid-template-columns: minmax(15rem, 1fr) minmax(18rem, 28rem);
   gap: clamp(1.25rem, 4vw, 3rem);
   align-items: center;
   margin: 0 0 clamp(3.5rem, 8vw, 6rem);
@@ -82,8 +82,10 @@
 
 .teaching-award__media {
   display: block;
+  width: 100%;
   min-width: 0;
   max-width: 100%;
+  justify-self: end;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--teaching-border) 72%, transparent);
   border-radius: 0.55rem;
@@ -649,7 +651,8 @@
 
   .teaching-award__media {
     order: 0;
-    width: 100%;
+    width: min(100%, 28rem);
+    align-self: center;
   }
 }
 
