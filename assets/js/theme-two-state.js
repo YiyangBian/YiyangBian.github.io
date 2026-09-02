@@ -1,0 +1,1 @@
+"function"==typeof determineThemeSetting&&"function"==typeof setThemeSetting&&("system"===determineThemeSetting()&&setThemeSetting(determineComputedTheme()),toggleThemeSetting=()=>{const e="dark"===determineComputedTheme()?"light":"dark";setThemeSetting(e)});
